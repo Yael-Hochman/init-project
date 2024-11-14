@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "T:\\Group A\\C#\\אילת יוספי\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
+    "T:\\Group A\\C#\\יעל הוכמן\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {}
   },
   "projects": {
-    "T:\\Group A\\C#\\אילת יוספי\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
+    "T:\\Group A\\C#\\יעל הוכמן\\WebApplication1\\WebApplication1\\WebApplication1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "T:\\Group A\\C#\\אילת יוספי\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectUniqueName": "T:\\Group A\\C#\\יעל הוכמן\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
         "projectName": "WebApplication1",
-        "projectPath": "T:\\Group A\\C#\\אילת יוספי\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
+        "projectPath": "T:\\Group A\\C#\\יעל הוכמן\\WebApplication1\\WebApplication1\\WebApplication1.csproj",
         "packagesPath": "C:\\Users\\student\\.nuget\\packages\\",
-        "outputPath": "T:\\Group A\\C#\\אילת יוספי\\WebApplication1\\WebApplication1\\obj\\",
+        "outputPath": "T:\\Group A\\C#\\יעל הוכמן\\WebApplication1\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

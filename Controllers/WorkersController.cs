@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApplication1.CLAS;
+using WebApplication1.CLASS;
+
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -7,29 +9,32 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class HotelController : ControllerBase
+    public class WorkersController : ControllerBase
     {
-        private static List<Workers> w=new List<Workers> { new Workers {firstname="yael",lastname="hochman",id=1,start= new TimeOnly(08, 12), end =new TimeOnly(14,12) } , new Workers { firstname = "shevi", lastname = "cohen", id = 2, start = new TimeOnly(06, 12), end = new TimeOnly(00, 00) } };
-
+        private static DataContext d;
+        public WorkersController(DataContext data)
+        {
+            d = data;
+        }
         // GET: api/<HotelController>
         [HttpGet]
         public IEnumerable<Workers> Get()
         {
-            return w;
+            return d.worker;
         }
 
         // GET api/<HotelController>/5
         [HttpGet("{id}")]
         public Workers Get(int id)
         {
-            return w[id];
+            return d.worker[id];
         }
 
         // POST api/<HotelController>
         [HttpPost]
         public Workers Post([FromBody] Workers p)
         {
-          w.Add(p);
+            d.worker.Add(p);
             return p;
         }
 
@@ -37,20 +42,22 @@ namespace WebApplication1.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] Workers i)
         {
-            int index = w.FindIndex(e => e.id == id); 
-            w[index].firstname = i.firstname; 
-            w[index].lastname = i.lastname; 
-            w[index].start = i.start; 
-            w[index].end = i.end;
-            w[index].id = i.id;
+            int index = d.worker.FindIndex(e => e.id == id);
+            d.worker[index].firstname = i.firstname;
+            d.worker[index].lastname = i.lastname;
+            d.worker[index].start = i.start;
+            d.worker[index].end = i.end;
+            d.worker[index].id = i.id;
 
-            
+
         }
 
         // DELETE api/<HotelController>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            var index = d.worker.FindIndex(e => e.id.Equals(id));
+            d.worker.Remove(d.worker[index]);
         }
     }
 }
